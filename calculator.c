@@ -48,24 +48,24 @@ int main(int argc, char* argv[])
     printf("first arg is not an float, enter two floats\n");
     return 1;
   }
-  char operation[2];
-  found = sscanf(argv[2], "%s", operation);
-  if (found != 1)
-  {
-    printf("Operation is not a character. Enter a character in arg2.\n");
-  }
   float larger;
-  found = sscanf(argv[3], "%f", &larger);
+  found = sscanf(argv[2], "%f", &larger);
   if (found != 1)
   {
-    printf("second arg is not an float, enter two floats\n");
+    printf("Second arg is not a float, enter two floats.\n");
+  }
+  char operation[3];
+  found = sscanf(argv[3], "%s", operation);
+  if (found != 1)
+  {
+    printf("Operation is not a character. Enter a character in arg3\n");
     return 1;
   }
-char plus[2] = "+";
-char minus[2] = "-";
-char times[2] = "x";
-char over[2] = "/";
-char power[2] = "^";
+char plus[3] = "+";
+char minus[3] = "-";
+char times[3] = "x";
+char over[3] = "/";
+char power[3] = "^";
 if (strcmp(operation, plus) == 0)
   {
     for (int i = 0; i < 5; i++) {
