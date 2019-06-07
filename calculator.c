@@ -34,6 +34,19 @@ float exponent(float smaller, float larger)
 
 int main(int argc, char* argv[])
 {
+{
+  int c, n, fact = 1;
+ 
+  printf("Enter a number to calculate its factorial\n");
+  scanf("%d", &n);
+ 
+  for (c = 1; c <= n; c++)
+    fact = fact * c;
+ 
+  printf("Factorial of %d = %d\n", n, fact);
+ 
+  return 0;
+}
   if (argc != 4)
   {
     printf("%s : expected 3 args, please enter two integers\n", argv[0]);
@@ -66,6 +79,9 @@ char minus[3] = "-";
 char times[3] = "x";
 char over[3] = "/";
 char power[3] = "^";
+
+
+
 if (strcmp(operation, plus) == 0)
   {
     for (int i = 0; i < 5; i++) {

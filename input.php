@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Calculator</title>
+    <title>Calculator made from C</title>
   </head>
 
   <body>
 
-    <h1>Final Project</h1>
+    <h1>Eugene and Omar's Project</h1>
 
     <?php
    
@@ -25,12 +25,14 @@
        }
     ?>
 
+	<h1> Use + for addition, - for subtraction, x for multiplication, / for division, and ^ for power </h1>
+
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-      Number: <input type="text" name="arg1"><br>
-      Number: <input type="text" name="arg2"><br>
+      1st Value: <input type="text" name="arg1"><br>
+      2nd Value: <input type="text" name="arg2"><br>
       Operation: <input type="text" name="arg3"><br>
       <br>
-      <input type="submit" value="Calculate">
+      <input type="submit" value="GOO">
     </form>
 
     <?php
@@ -44,14 +46,12 @@
          echo $arg3;
          echo "<br>";
        
-         echo "<h2>Program Output (an array):</h2>";
+         echo "<h2>Program Output </h2>";
          foreach ($output as $line) {
            echo $line;
            echo "<br>";
+
          }
-       
-         echo "<h2>Program Return Code:</h2>";
-         echo $retc;
        }
     ?>
     
