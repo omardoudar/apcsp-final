@@ -32,7 +32,6 @@ float exponent(float smaller, float larger)
   return solution;
 }
 
-
 int main(int argc, char* argv[])
 {
   if (argc != 4)
@@ -42,6 +41,7 @@ int main(int argc, char* argv[])
   }
 
  float smaller;
+  
   int found = sscanf(argv[1], "%f", &smaller);
   if (found != 1)
   {
@@ -61,3 +61,50 @@ int main(int argc, char* argv[])
     printf("second arg is not an float, enter two floats\n");
     return 1;
   }
+char plus[2] = "+";
+char minus[2] = "-";
+char times[2] = "x";
+char over[2] = "/";
+char power[2] = "^";
+if (strcmp(operation, plus) == 0)
+  {
+    for (int i = 0; i < 5; i++) {
+      float addition = add(smaller, larger);
+      printf("%f + %f is equal to %f\n", smaller, larger, addition);
+      larger++;
+      }
+  }
+if (strcmp(operation, minus) == 0)
+  {
+    for (int i = 0; i < 5; i++) {
+      float subtraction = sub(smaller, larger);
+      printf("%f - %f is equal to %f\n", smaller, larger, subtraction);
+      larger++;
+    }
+  }
+if (strcmp(operation, times) == 0)
+  {
+    for (int i = 0; i < 5; i++) {
+      float multiplication = mult(smaller, larger);
+      printf("%f x %f is equal to %f\n", smaller, larger, multiplication);
+      larger++;
+    }
+  }
+if (strcmp(operation, over) == 0)
+  {
+    for (int i = 0; i < 5; i++) {
+      float division = div(smaller, larger);
+      printf("%f / %f is equal to %f\n", smaller, larger, division);
+      larger++;
+    }
+   }
+if (strcmp(operation, power) == 0)
+  {
+    for (int i = 0; i < 5; i++) {
+      float exponents = exponent(smaller, larger);
+      printf("%f ^ %f is equal to %f\n", smaller, larger, exponents);
+      larger++;
+    }
+   }
+}
+

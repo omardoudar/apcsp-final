@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Function Calculator</title>
+    <title>Calculator</title>
   </head>
 
 
   <body>
 
-    <h1>Final Project Test v1.5</h1>
+    <h1>Final Project</h1>
 
     <?php
-       // define variables and set to empty values
+   
        $arg1 = $arg2 = $arg3 = $output = $retc = "";
        if ($_SERVER["REQUEST_METHOD"] == "POST") {
          $arg1 = test_input($_POST["arg1"]);
@@ -31,10 +31,11 @@
       Operation: <input type="text" name="arg2"><br>
       Number: <input type="text" name="arg3"><br>
       <br>
-      <input type="submit" value="Calculate!">
+      <input type="submit" value="Calculate">
     </form>
 
     <?php
+    
        if (is_numeric($retc)) {
          echo "<h2>Your Input:</h2>";
          echo $arg1;
