@@ -8,7 +8,6 @@
   <body>
 
     <h1>Final Project Test v1.5</h1>
-    <p>Changes:<br>The calculator works now. <br> Use "+" to add, "-" to subtract, "x" to multiply, "/" to divide and "^" to raise a number to a power.<br> The calculator is now a function calculator.</p>
 
     <?php
        // define variables and set to empty values
@@ -17,7 +16,7 @@
          $arg1 = test_input($_POST["arg1"]);
          $arg2 = test_input($_POST["arg2"]);
          $arg3 = test_input($_POST["arg3"]);
-         exec("/usr/lib/cgi-bin/sp1a/finaltest " . $arg1 . " " . $arg2 . " " . $arg3, $output, $retc); 
+         exec("/usr/lib/cgi-bin/sp1a/calculator " . $arg1 . " " . $arg2 . " " . $arg3, $output, $retc); 
        }
        function test_input($data) {
          $data = trim($data);
@@ -36,7 +35,6 @@
     </form>
 
     <?php
-       // only display if return code is numeric - i.e. exec has been called
        if (is_numeric($retc)) {
          echo "<h2>Your Input:</h2>";
          echo $arg1;
