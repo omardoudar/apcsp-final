@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Function Calculator</title>
+    <title>Calculator</title>
   </head>
-
-
+  
   <body>
 
     <h1>Final Project Test v1.5</h1>
@@ -28,10 +27,10 @@
 
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
       Number: <input type="text" name="arg1"><br>
-      Operation: <input type="text" name="arg2"><br>
-      Number: <input type="text" name="arg3"><br>
+      Number: <input type="text" name="arg2"><br>
+      Operation: <input type="text" name="arg3"><br>
       <br>
-      <input type="submit" value="Calculate!">
+      <input type="submit" value="Calculate">
     </form>
 
     <?php
