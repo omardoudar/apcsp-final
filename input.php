@@ -26,7 +26,7 @@
     ?>
 
 	<h1> Use + for addition, - for subtraction, x for multiplication, / for division, and ^ for power </h1>
-
+	<h2> type in 1x1 for a full multiplication table up to 100 </h2>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
       1st Value: <input type="text" name="arg1"><br>
       2nd Value: <input type="text" name="arg2"><br>
