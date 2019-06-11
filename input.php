@@ -32,7 +32,7 @@
       2nd Value: <input type="text" name="arg2"><br>
       Operation: <input type="text" name="arg3"><br>
       <br>
-      <input type="submit" value="GOO">
+      <input type="submit" value="GO">
     </form>
 
     <?php
@@ -52,6 +52,8 @@
            echo "<br>";
 
          }
+	echo "<h2>Program Return Code:</h2>";
+         echo $retc;
        }
     ?>
     
