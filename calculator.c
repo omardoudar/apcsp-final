@@ -34,31 +34,30 @@ float exponent(float smaller, float larger)
 
 int main(int argc, char* argv[])
 {
-   if (argc != 4)  
+  if (argc != 4)
   {
     printf("%s : expected 3 args, please enter two integers\n", argv[0]);
     return 1;
   }
-
- float smaller;
   
+ float smaller;
   int found = sscanf(argv[1], "%f", &smaller);
   if (found != 1)
   {
-    printf("first arg is not an float, enter two floats\n");
+    printf("First value is not a float.\n");
     return 1;
   }
   float larger;
   found = sscanf(argv[2], "%f", &larger);
   if (found != 1)
   {
-    printf("Second arg is not a float, enter two floats.\n");
+    printf("Second value is not a float.\n");
   }
   char operation[3];
   found = sscanf(argv[3], "%s", operation);
   if (found != 1)
   {
-    printf("Operation is not a character. Enter a character in arg3\n");
+    printf("Operation is not a character. Enter a character in arg2.\n");
     return 1;
   }
 char plus[3] = "+";
@@ -67,44 +66,33 @@ char times[3] = "x";
 char over[3] = "/";
 char power[3] = "^";
 
-if (strcmp(operation, times) == 0)
-  if (strcmp(operation, plus) == 0)
+if (strcmp(operation, plus) == 0)
   {
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 100; i++)
+ {
       float addition = add(smaller, larger);
       printf("%f + %f is equal to %f\n", smaller, larger, addition);
       larger++;
+      smaller--;
       }
   }
-if (strcmp(operation, minus) == 0)
+if (strcmp(operation, times) == 0)
   {
-    for (int i = 0; i < 5; i++) {
-      float subtraction = sub(smaller, larger);
-      printf("%f - %f is equal to %f\n", smaller, larger, subtraction);
-      larger++;
-    }
-  }{
-    for (int i = 0; i < 100; i++)
-    {
+    for (int i = 0; i < 10; i++)
+ {
       float multiplication = mult(smaller, larger);
-      printf("%f x %f is equal to %f\n", smaller, larger, multiplication);
+      printf("%f - %f is equal to %f\n", smaller, larger, multiplication);
       larger++;
       smaller++;
     }
-  }  
-if (strcmp(operation, plus) == 0)
-  {
-    float addition = add(smaller, larger);
-    printf("%f + %f is equal to %f\n", smaller, larger, addition);
   }
-if (strcmp(operation, minus) == 0)
-  {
-    float subtraction = sub(smaller, larger);
-    printf("%f - %f is equal to %f\n", smaller, larger, subtraction);
+  if (strcmp(operation, power) == 0)
+    {
+      for (int i = 0; i < 5; i++)
+      {
+       float exponents = exponent(smaller,larger);
+       printf("%f ^ %f is equal to %f\n", smaller, larger, exponents);
+       smaller++;
+    }
   }
-if (strcmp(operation, over) == 0)
-  {
-    float division = div(smaller, larger);
-    printf("%f / %f is equal to %f\n", smaller, larger, division);
-  }
-if strcmp(operation, power) == 0)
+}
