@@ -95,4 +95,20 @@ if (strcmp(operation, times) == 0)
        smaller++;
     }
   }
+  if (strcmp(operation, minus) == 0)
+    {
+      for (int i = 0; i < 1; i++)
+      {
+       float subtraction = sub(smaller,larger);
+       printf("%f - %f is equal to %f\n", smaller, larger, subtraction);
+    }
+  }
+   if (strcmp(operation, over) == 0)
+    {
+      for (int i = 0; i < 1; i++)
+      {
+       float division = div(smaller,larger);
+       printf("%f / %f is equal to %f\n", smaller, larger, division);
+    }
+  }
 }
