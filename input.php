@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Calculator made from C</title>
+    <titlle>Calculator made using C</title>
   </head>
+
 
   <body>
 
-    <h1>Eugene and Omar's Project</h1>
+    <h1>Omar and Eugene's Calculator</h1>
+    <p>Some cool functions include being able to see every number squared up to 100 when typing 1x1, and a cool math proof for addition for typing 50+50</p>
 
     <?php
-   
        $arg1 = $arg2 = $arg3 = $output = $retc = "";
        if ($_SERVER["REQUEST_METHOD"] == "POST") {
          $arg1 = test_input($_POST["arg1"]);
@@ -25,20 +26,17 @@
        }
     ?>
 
-	<h1> Use + for addition, - for subtraction, x for multiplication, / for division, and ^ for power </h1>
-	<h2> type in 1x1 for a full multiplication table up to 100 </h2>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-      1st Value: <input type="text" name="arg1"><br>
+      1st value: <input type="text" name="arg1"><br>
       2nd Value: <input type="text" name="arg2"><br>
-      Operation: <input type="text" name="arg3"><br>
+      Math operation: <input type="text" name="arg3"><br>
       <br>
-      <input type="submit" value="GOO">
+      <input type="submit" value="Go">
     </form>
-
+	  
     <?php
-    
        if (is_numeric($retc)) {
-         echo "<h2>Your Input:</h2>";
+         echo "<h2>User Input:</h2>";
          echo $arg1;
          echo "<br>";
          echo $arg2;
@@ -46,12 +44,14 @@
          echo $arg3;
          echo "<br>";
        
-         echo "<h2>Program Output </h2>";
+         echo "<h2>Program Output (an array):</h2>";
          foreach ($output as $line) {
            echo $line;
            echo "<br>";
-
          }
+       
+         echo "<h2>Program Return Code:</h2>";
+         echo $retc;
        }
     ?>
     
