@@ -67,17 +67,18 @@ char over[3] = "/";
 char power[3] = "^";
 if (strcmp(operation, plus) == 0)
   {
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 100; i++) 
+    {
       float addition = add(smaller, larger);
       printf("%f + %f is equal to %f\n", smaller, larger, addition);
       smaller--;
       larger++;
       }
   }
-
 if (strcmp(operation, multiplication) == 0)
   {
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 100; i++) 
+    {
       float multiplication = mult(smaller, larger);
       printf("%f x %f is equal to %f\n", smaller, larger, multiplication);
       smaller++;
@@ -86,7 +87,8 @@ if (strcmp(operation, multiplication) == 0)
   }
 if (strcmp(operation, exponent) == 0)
   {
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 10; i++) 
+    {
       float exponent = powf(smaller, larger);
       printf("%f ^ %f is equal to %f\n", smaller, larger, exponent);
       smaller++;
