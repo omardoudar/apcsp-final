@@ -78,10 +78,10 @@ if (strcmp(operation, plus) == 0)
   }
 if (strcmp(operation, times) == 0)
   {
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 100; i++)
  {
       float multiplication = mult(smaller, larger);
-      printf("%f - %f is equal to %f\n", smaller, larger, multiplication);
+      printf("%f x %f is equal to %f\n", smaller, larger, multiplication);
       larger++;
       smaller++;
     }
