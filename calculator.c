@@ -75,13 +75,21 @@ if (strcmp(operation, plus) == 0)
       }
   }
 
-if (strcmp(operation, times) == 0)
+if (strcmp(operation, multiplication) == 0)
   {
     for (int i = 0; i < 100; i++) {
       float multiplication = mult(smaller, larger);
       printf("%f x %f is equal to %f\n", smaller, larger, multiplication);
       smaller++;
       larger++;
+    }
+  }
+if (strcmp(operation, exponent) == 0)
+  {
+    for (int i = 0; i < 10; i++) {
+      float exponent = powf(smaller, larger);
+      printf("%f ^ %f is equal to %f\n", smaller, larger, exponent);
+      smaller++;
     }
   }
 }
